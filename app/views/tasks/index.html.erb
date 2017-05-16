@@ -1,0 +1,36 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-offset-xs-3">
+
+      <%= link_to "ADD A TASK", "/tasks/new" %>
+
+      <table>
+        <thead>
+          <th>USER</th>
+          <th>CONTENT</th>
+          <th>DONE</th>
+        </thead>
+        <tbody>
+          <% @tasks.each_with_index do |task, index| %>
+            <tr>
+              <td><%= task.user %></td>
+              <td><%= task.content %></td>
+              <td><%= task.done %></td>
+              <td><%= link_to "SEE TASK", task_path(task) %></td>
+              <td><%= link_to "DELETE TASK", task_path(task),
+                method: :delete,
+                data: { confirm: "Are you sure?" } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+

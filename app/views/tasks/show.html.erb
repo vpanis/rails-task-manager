@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-offset-xs-3">
+      <h1>USER : <%= @task.user %></h1>
+      <br>
+      <h1>CONTENT : <%= @task.content %></h1>
+      <br>
+      <h1>DONE : <%= @task.done %></h1>
+      <br>
+      <%= link_to "UPDATE THIS TASK", edit_task_path %>
+      <br>
+      <%= link_to "BACK TO LIST", tasks_path %>
+    </div>
+  </div>
+</div>
